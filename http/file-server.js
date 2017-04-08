@@ -20,7 +20,7 @@ const server = http.createServer(function(request, response) {
 
     // 获取文件状态
     fs.stat(filepath, function(err, stats) {
-        if(!err && static.isFile()) {
+        if(!err && stats.isFile()) {
             // 没有出错并且文件存在:
             console.log('200 ' + request.url);
 
